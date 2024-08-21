@@ -5,7 +5,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 This is Forty, my latest and greatest addition to HTML5 UP and, per its incredibly
 creative name, my 40th (woohoo)! It's built around a grid of "image tiles" that are
-set up to smoothly transition to secondary landing pages (for which a separate page
+set up to smoothly transition to secondary projects pages (for which a separate page
 template is provided), and includes a number of neat effects (check out the menu!),
 extra features, and all the usual stuff you'd expect. Hope you dig it!
 
