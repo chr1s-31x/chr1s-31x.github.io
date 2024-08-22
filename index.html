@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Forty by HTML5 UP</title>
+	<title>Christina Lin Xie Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -143,7 +143,7 @@
 		<section id="contact">
 			<div class="inner">
 				<section>
-					<form method="post" action="process-form.php">
+					<form id="contactForm"  > <!--method="post" action="https://formspree.io/f/xwperqqz"-->
 						<div class="fields">
 							<div class="field half">
 								<label for="name">Name</label>
@@ -151,13 +151,16 @@
 							</div>
 							<div class="field half">
 								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
+								<input type="email" name="email" id="email" />
 							</div>
 							<div class="field">
 								<label for="message">Message</label>
 								<textarea name="message" id="message" rows="6"></textarea>
 							</div>
 						</div>
+						<input type="hidden" name="_next" value="https://chr1s-31x.github.io" />
+						<input type="text" name="_gotcha" style="display:none" />
+						<p id="errorMessage" style="color:red; display:none;">Please fill out all fields before sending.</p>
 						<ul class="actions">
 							<li><input type="submit" value="Send Message" class="primary" /></li>
 							<li><input type="reset" value="Clear" /></li>
@@ -169,7 +172,7 @@
 						<div class="contact-method">
 							<span class="icon solid alt fa-envelope"></span>
 							<h3>Email</h3>
-							<a href="christina.xie04@gmail.com">christina.xie04@gmail.com</a>
+							<a href="mailto:christina.xie04@gmail.com">christina.xie04@gmail.com</a>
 						</div>
 					</section>
 					<section>
@@ -183,23 +186,60 @@
 						<div class="contact-method">
 							<span class="icon solid alt fa-phone"></span>
 							<h3>Phone</h3>
-							<span>+1 (226) 787 2543</span>
+							<a href="tel:+12267872543">+1 (226) 787 2543</a>
 						</div>
 					</section>
-
-					<!---
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-home"></span>
-							<h3>Address</h3>
-							<span>1234 Somewhere Road #5432<br />
-								Nashville, TN 00000<br />
-								United States of America</span>
-						</div>
-					</section> --->
 				</section>
 			</div>
 		</section>
+
+		<script>
+			document.getElementById('contactForm').addEventListener('submit', function(event) {
+				event.preventDefault();
+
+				var name = document.getElementById('name').value.trim();
+				var email = document.getElementById('email').value.trim();
+				var message = document.getElementById('message').value.trim();
+				var errorMessage = document.getElementById('errorMessage');
+			
+				if (!name || !email || !message || !validateEmail(email)) {
+					errorMessage.style.display = 'block';
+					event.preventDefault(); // Prevent the form from being submitted
+				} else {
+					errorMessage.style.display = 'none'; // Hide error message if validation passes
+
+					// Prepare data to be sent
+					var formData = new FormData(this); //this
+
+					// Submit form data using fetch
+					fetch('https://formspree.io/f/xwperqqz', {
+						method: 'POST',
+						body: formData,
+						headers: {
+							'Accept': 'application/json'
+						}
+					})
+					.then(response => response.json())
+					.then(data => {
+						if (data.ok) {
+							window.location.href = document.querySelector('input[name="_next"]').value;
+						} else {
+							throw new Error('Form submission error.');
+						}
+					})
+					.catch(error => {
+						console.error('Error:', error);
+						alert('There was a problem sending your message. Please try again.');
+					});
+				}
+			});
+			
+			function validateEmail(email) {
+				var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+				return re.test(String(email).toLowerCase());
+			}
+			</script>
+
 
 		<!-- Footer -->
 		<footer id="footer">
