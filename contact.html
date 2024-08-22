@@ -104,15 +104,6 @@
 		</section>
 
 		<script>
-            /*
-            
-            document.addEventListener('DOMContentLoaded', function() {
-                console.log('DOM fully loaded and parsed'); // Check if this message appears
-                setTimeout(function() {
-                    document.getElementById('contact').classList.add('show-message');
-                    console.log('Added show-message class'); // Verify if this message appears
-                }, 100);
-            });*/
 
 			document.getElementById('contactForm').addEventListener('submit', function(event) {
 
@@ -143,6 +134,8 @@
 					.then(response => response.json())
 					.then(data => {
 						if (data.ok) {
+                            // Show a success message
+                            alert('Thanks for messaging! I will be in touch soon :)');
 							window.location.href = document.querySelector('input[name="_next"]').value;
 						} else {
 							throw new Error('Form submission error.');

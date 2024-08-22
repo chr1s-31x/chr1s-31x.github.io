@@ -3540,7 +3540,7 @@ input, select, textarea {
 		}
 
 			#banner.major.alt {
-				opacity: 0.75;
+				opacity: 0.75; /*75*/
 			}
 
 		#banner.style1:after {
