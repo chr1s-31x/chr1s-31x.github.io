@@ -8,6 +8,7 @@
 
  <head>
 	<title>Contact | Christina Xie</title>
+    
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,7 +16,6 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 </head> 
-
 
 
 <body class="is-preload">
@@ -26,7 +26,7 @@
         <!-- Header -->
         <header id="header" class="alt">
             <p class="logo" style="line-height: 1.8; margin: 30px;"> <!--href="contact.html"-->
-                <strong>Hi</strong> <span>nice to meet you </span> <br />
+                <strong>Hi</strong> <span>nice to meet you :)</span> <br />
             <!--Glad you're reaching out :)--></p>
             <nav>
                 <a href="#menu">Menu</a>
@@ -38,9 +38,16 @@
 			<ul class="links">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="projects.html">Portfolio</a></li>
+                <li><a href="Christina_Master_Resume.pdf">Resume</a></li>
 				<!--<li><a href="contact.html">Connect with Me</a></li>-->
 			</ul>
 		</nav>
+
+        <!-- Centered Message -->
+        <div class="centered-message">
+            <h1>Glad you're reaching out!</h1>
+        </div>
+
 
         <!-- Contact -->
 		<section id="contact">
@@ -61,7 +68,7 @@
 								<textarea name="message" id="message" rows="6"></textarea>
 							</div>
 						</div>
-						<input type="hidden" name="_next" value="https://chr1s-31x.github.io" />
+						<input type="hidden" name="_next" value="https://chr1s-31x.github.io/contact.html" />
 						<input type="text" name="_gotcha" style="display:none" />
 						<p id="errorMessage" style="color:red; display:none;">Please fill out all fields before sending.</p>
 						<ul class="actions">
@@ -97,7 +104,18 @@
 		</section>
 
 		<script>
+            /*
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('DOM fully loaded and parsed'); // Check if this message appears
+                setTimeout(function() {
+                    document.getElementById('contact').classList.add('show-message');
+                    console.log('Added show-message class'); // Verify if this message appears
+                }, 100);
+            });*/
+
 			document.getElementById('contactForm').addEventListener('submit', function(event) {
+
 				event.preventDefault();
 
 				var name = document.getElementById('name').value.trim();

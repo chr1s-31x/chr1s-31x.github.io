@@ -2271,6 +2271,19 @@ input, select, textarea {
 		}
 
 /* Actions */
+	/* Ensure the ul takes up the full width of its container */
+	.main-buttons {
+		list-style: none; /* Remove default list styling */
+		padding: 0; /* Remove default padding */
+		margin: 120px 0 0 0; /* Remove default margin */
+		text-align: center; /* Center-align the list items */
+	}
+
+	/* Style for each button item */
+	.main-buttons li {
+		display: inline-block; /* Ensure buttons are on the same line */
+		margin: -5px; /* Adjust the spacing between buttons */
+	}
 
 	ul.actions {
 		display: -moz-flex;
@@ -2531,6 +2544,12 @@ input, select, textarea {
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+	}
+
+
+	/* Additional padding for the Resume button */
+	.resume-button {
+		padding: 0 80px 0 80px; /* Increase padding for Resume button */
 	}
 
 		input[type="submit"]:hover, input[type="submit"]:active,
@@ -2903,7 +2922,6 @@ input, select, textarea {
 		}
 
 /* Contact Method */
-
 	.contact-method {
 		margin: 0 0 2em 0;
 		padding-left: 3.25em;
@@ -3481,6 +3499,7 @@ input, select, textarea {
 					text-transform: uppercase;
 				}
 		
+		
 		#banner .icon {
 			margin: 0.5rem; /*Space between icons*/
 		}
@@ -3489,9 +3508,24 @@ input, select, textarea {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-top: 20rem; /* Adjust this value to move icons lower */
+			margin-top: 10rem; /* Adjust this value to move icons lower */
+		}
+
+		#banner .icon-bottom {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 15rem; /* Adjust this value to move icons lower */
+		}
+
+		/* Style for individual icons */
+		#banner .icon-bottom .icon {
+			font-size: 3rem; /* Increase the size of the icons */
+			margin: 0 20rem 0 20rem; /* Add horizontal space between icons */
+			/* Adjust margin as needed for more or less space between icons */
 		}
 		
+
 		#banner .icon.alt:before {
 			height: 2em; /* Adjust size as needed */
 			width: 2em;  /* Adjust size as needed */
@@ -3658,6 +3692,16 @@ input, select, textarea {
 
 		
 /* Contact */
+
+	/* Center the message */
+	.centered-message {
+		text-align: center; /* Centers the text horizontally */
+		margin: 0 0 -150px 0; /* Adjust bottom margin to reduce space */
+		opacity: 0; /* Start as invisible */
+		animation: fadeIn 2s ease-in forwards;
+	}
+
+
 	@keyframes fadeIn {
 		from {
 			opacity: 0;
@@ -3669,7 +3713,7 @@ input, select, textarea {
 
 	#contact > .inner {
 		opacity: 0; /* Start with the element invisible */
-		animation: fadeIn 2s ease-in forwards; /* Apply the fade-in animation over 2 seconds */
+		animation: fadeIn 0.75s ease-in forwards; /* Apply the fade-in animation over 2 seconds */
 	}
 
 
@@ -3681,7 +3725,8 @@ input, select, textarea {
 		justify-content: center; /* Horizontally centers the content */
 		align-items: center; /* Vertically centers the content */
 		min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
-		padding: 20px; /* Add padding if needed */
+		padding: 0px; /* Add padding if needed */
+		
 	}
 
 		#contact > .inner {
@@ -3691,7 +3736,7 @@ input, select, textarea {
 			display: flex;
 			padding: 0 !important;
 			opacity: 0; /* Start invisible */
-			animation: fadeIn 1s ease-in forwards; /* Fade in over 1 seconds */
+			animation: fadeIn 1.5s ease-in forwards; /* Fade in over 1 seconds */
 		}
 
 			#contact > .inner > :nth-child(2n - 1) {
@@ -3763,10 +3808,41 @@ input, select, textarea {
 
 		}
 
+		
+
 		#contact textarea {
-			max-width: 810px; /* Set the maximum width as per your preference */
+			max-width: 810px; 
+			max-height: 500px; 
+			min-width:  500px; 
+			min-height: 200px; 
 			width: 100%; /* Ensure it takes full width within its container */
 			box-sizing: border-box; /* Include padding and border in the element's total width */
+		}
+
+		/* Responsive Design */
+		@media screen and (max-height: 800px) {
+			.centered-message {
+				margin: 0 0 0px 0; /* Increase bottom margin on smaller screens */
+				opacity: 0; /* Start as invisible */
+    			transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+			}
+
+			#contact {
+				margin-top: 0; /* Reset negative margin on smaller screens */
+				padding: 20px; /* Increase padding if needed */
+			}
+		}
+
+		@media screen and (max-height: 736px) {
+			.centered-message {
+				margin: 0 0 20px 0; /* Further increase margin for very small screens */
+				opacity: 0; /* Start as invisible */
+    			transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+			}
+
+			#contact {
+				padding: 15px; /* Adjust padding for very small screens */
+			}
 		}
 		
 
