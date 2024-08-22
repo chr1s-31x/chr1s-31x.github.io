@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+ <head>
+	<title>Contact | Christina Xie</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head> 
+
+
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <p class="logo" style="line-height: 1.8; margin: 30px;"> <!--href="contact.html"-->
+                <strong>Hi</strong> <span>nice to meet you </span> <br />
+            <!--Glad you're reaching out :)--></p>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="projects.html">Portfolio</a></li>
+				<!--<li><a href="contact.html">Connect with Me</a></li>-->
+			</ul>
+		</nav>
+
+        <!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section>
+					<form id="contactForm"  > <!--method="post" action="https://formspree.io/f/xwperqqz"-->
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="6"></textarea>
+							</div>
+						</div>
+						<input type="hidden" name="_next" value="https://chr1s-31x.github.io" />
+						<input type="text" name="_gotcha" style="display:none" />
+						<p id="errorMessage" style="color:red; display:none;">Please fill out all fields before sending.</p>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Clear" /></li>
+						</ul>
+					</form>
+				</section>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<a href="mailto:christina.xie04@gmail.com">christina.xie04@gmail.com</a>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon brands alt fa-linkedin-in"></span>
+							<h3>LinkedIn</h3>
+							<a href="https://www.linkedin.com/in/christina-xie-27a658220">www.linkedin.com/in/christina-xie-27a658220</a>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-phone"></span>
+							<h3>Phone</h3>
+							<a href="tel:+12267872543">+1 (226) 787 2543</a>
+						</div>
+					</section>
+				</section>
+			</div>
+		</section>
+
+		<script>
+			document.getElementById('contactForm').addEventListener('submit', function(event) {
+				event.preventDefault();
+
+				var name = document.getElementById('name').value.trim();
+				var email = document.getElementById('email').value.trim();
+				var message = document.getElementById('message').value.trim();
+				var errorMessage = document.getElementById('errorMessage');
+			
+				if (!name || !email || !message || !validateEmail(email)) {
+					errorMessage.style.display = 'block';
+					event.preventDefault(); // Prevent the form from being submitted
+				} else {
+					errorMessage.style.display = 'none'; // Hide error message if validation passes
+
+					// Prepare data to be sent
+					var formData = new FormData(this); //this
+
+					// Submit form data using fetch
+					fetch('https://formspree.io/f/xwperqqz', {
+						method: 'POST',
+						body: formData,
+						headers: {
+							'Accept': 'application/json'
+						}
+					})
+					.then(response => response.json())
+					.then(data => {
+						if (data.ok) {
+							window.location.href = document.querySelector('input[name="_next"]').value;
+						} else {
+							throw new Error('Form submission error.');
+						}
+					})
+					.catch(error => {
+						console.error('Error:', error);
+						alert('There was a problem sending your message. Please try again.');
+					});
+				}
+			});
+			
+			function validateEmail(email) {
+				var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+				return re.test(String(email).toLowerCase());
+			}
+			</script>
+
+        </div>
+
+
+    </body>
+
+    <!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</html>
