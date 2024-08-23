@@ -3657,6 +3657,23 @@ input, select, textarea {
 	#banner.style2 .icon-group {
 		margin-top: 10rem; /* Adjust as needed */
 	}
+
+	/* Style3 Banner Styles */
+	#banner.style3 {
+		height: 47vh; /* Adjust as needed */
+		max-height: 20em; /* Adjust as needed */
+		min-height: 10em; /* Adjust as needed */
+		padding: 2em 0; /* Adjust as needed */
+	}
+
+	#banner.style3 .inner {
+		padding: 1em; /* Adjust as needed */
+	}
+
+	#banner.style3 .icon-group {
+		margin-top: 10rem; /* Adjust as needed */
+	}
+
 /* Main */
 
 	#main {
@@ -3870,6 +3887,9 @@ input, select, textarea {
 				margin-left: 0;
 				padding-left: 0;
 			}
+
+			
+			
 
 	@media screen and (max-width: 480px) {
 
