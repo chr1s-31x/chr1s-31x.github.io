@@ -3824,7 +3824,7 @@ input, select, textarea {
 		/* Responsive Design */
 		@media screen and (max-height: 800px) {
 			.centered-message {
-				margin: 0 0 0px 0; /* Increase bottom margin on smaller screens */
+				margin: 0 0 -100px 0; /* Increase bottom margin on smaller screens */
 				opacity: 0; /* Start as invisible */
     			transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
 			}
@@ -3835,9 +3835,9 @@ input, select, textarea {
 			}
 		}
 
-		@media screen and (max-height: 736px) {
+		@media screen and (max-height: 600px) {
 			.centered-message {
-				margin: 0 0 20px 0; /* Further increase margin for very small screens */
+				margin: 0 0 -10px 0; /* Further increase margin for very small screens */
 				opacity: 0; /* Start as invisible */
     			transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
 			}
