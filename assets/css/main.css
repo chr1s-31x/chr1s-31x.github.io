@@ -2630,7 +2630,7 @@ input, select, textarea {
 				-moz-transition: opacity 0.2s ease-in-out;
 				-webkit-transition: opacity 0.2s ease-in-out;
 				-ms-transition: opacity 0.2s ease-in-out;
-				transition: opacity 0.2s ease-in-out;
+				transition: opacity 0.2s ease-in-out; 
 				background-position: center right;
 				background-repeat: no-repeat;
 				background-size: 36px 24px;
@@ -2671,7 +2671,7 @@ input, select, textarea {
 			button.next:active:after,
 			.button.next:hover:after,
 			.button.next:active:after {
-				opacity: 1;
+				opacity: 1; /*1*/
 			}
 
 			@media screen and (max-width: 1280px) {
@@ -2694,6 +2694,7 @@ input, select, textarea {
 			background-color: #ffffff;
 			box-shadow: none;
 			color: #242943;
+			opacity:0.9; /*Added*/
 		}
 
 			input[type="submit"].primary:hover, input[type="submit"].primary:active,
@@ -3399,7 +3400,7 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		background-image: url("../../images/torontoskyline.jfif"); /*banner.jpg*/
+		background-image: url("../../images/carselfie.jpg"); /*banner.jpg*/ /*torontoskyline.jfif*/
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3434,7 +3435,7 @@ input, select, textarea {
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.85;
+			opacity: 0.2; /*0.85*/
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -3509,6 +3510,7 @@ input, select, textarea {
 			justify-content: center;
 			align-items: center;
 			margin-top: 10rem; /* Adjust this value to move icons lower */
+			opacity:0.8; /*Added*/
 		}
 
 		#banner .icon-bottom {
