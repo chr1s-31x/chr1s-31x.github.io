@@ -4113,3 +4113,46 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+	/* Hide the submenu by default */
+#menu .links ul.submenu {
+    display: none;
+    position: absolute;
+	right: 24.5%;
+    background: rgba(36, 41, 67, 0); /*(36, 41, 67, 0.9);*/
+	bottom: 30%;
+    padding: 0;
+    margin-top: 1px; /* Adjust as needed */
+	opacity: 0; /* Hide submenu initially */
+	animation: fadeIn 0.3s ease-in forwards;
+    list-style: none;
+    width: 15%;
+}
+
+/* Show the submenu when hovering over the parent li */
+#menu .links li:hover > ul.submenu {
+    display: block;
+}
+
+/* Submenu link styles */
+#menu .links ul.submenu li a {
+    border-top: none 1px rgba(212, 212, 255, 1) !important;
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    line-height: 3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    background: none;
+}
+
+/* Submenu items on hover */
+#menu .links ul.submenu li a:hover {
+    background: rgba(36, 41, 67, 0.7); /* Highlight on hover */
+}
+
+/* First child submenu item shouldn't have a top border */
+#menu .links ul.submenu li:first-child a {
+    border-top: 0;
+}
