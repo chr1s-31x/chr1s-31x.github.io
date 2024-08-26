@@ -58,25 +58,37 @@
 					<header class="major">
 						<h1>Tetris</h1>
 					</header>
-					<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-						venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim
-						auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque
-						in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar
-						mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque
-						enim turpis, hendrerit.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class
-						aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam
-						tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc
-						ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non,
-						bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus.
-						Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In
-						non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
+
+					<div class="full-screen-images">
+						<img src="tetris/startscreen.png" alt="Image 1" />
+						<img src="tetris/instructionscreen.png" alt="Image 2" />
+						<img src="tetris/homescreen.png" alt="Image 3" />
+						<img src="tetris/endscreen.png" alt="Image 4" />
+					</div>
+					<p><strong>Description:</strong> Player controls various geometric shapes (these pieces are displayed on the home screen) 
+						via Personal System/2 (PS/2) keyboard. The game is displayed through a Video Graphics Array (VGA) display, where one 
+						piece will continously descend on the game board. 
+						The main objective is to strategically stack each piece to form complete horizontal lines, at which point the row 
+						will be "cleared," the row will disappear, and as the blocks above fall down to fill the gap, 1000 points are 
+						added to the player's score. 
+						Players must continue clearing rows and gaining points as long as possible without any stack of blocks reaching 
+						the top of the board. Else, the game is over and players will be given the option to retry. </p>
+
+					<div class="video-container">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/780Wi5F2Dbs?si=acw5nLpbn8pZzfX7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+
+					<p>
+						<ul>
+							<strong>Featured:</strong>
+							<li>Processor polls the PS/2 keyboard inputs and clears the FIFO (first-in first-out) data registers.</li>
+							<li>A scoring algorithm to checks for and stores cleared rows, accordingly dropping the remaining pieces on the board down by the number of rows cleared.</li>
+							<li>A game logic algorithm to handles input-based piece movements as well as collision logic and move validity according to board boundaries and already placed pieces.</li>
+							<li>VGA uses double buffering when rendering to achieve a smooth visual experience. </li>
+							<li> The audio interface is triggered to output sound effects when either a row is cleared, a shape collides with another shape, or the game is over.</li>
+						</ul>
 					</p>
-					<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor
-						imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet.
-						Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at,
-						elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+					<p></p>
 				</div>
 			</section>
 
