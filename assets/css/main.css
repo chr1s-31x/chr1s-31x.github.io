@@ -3677,8 +3677,8 @@ input, select, textarea {
 
 		/* Style2 Banner Styles */
 	#banner.style2 {
-		height: 47vh; /* Adjust as needed */
-		max-height: 30em; /* Adjust as needed */
+		height: calc(43vh - 1em); /*43vh Adjusted for dynamic height */ /* Adjust as needed */ /*COME BACK*/
+		max-height: 30em; /*Adjust as needed */
 		min-height: 15em; /* Adjust as needed */
 		padding: 2em 0; /* Adjust as needed */
 	}
