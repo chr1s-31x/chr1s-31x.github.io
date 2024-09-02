@@ -65,63 +65,81 @@
 						<img src="tetris/homescreen.png" alt="Image 3" />
 						<img src="tetris/endscreen.png" alt="Image 4" />
 					</div>
-					<p><strong>Description:</strong> Player controls various geometric shapes (these pieces are displayed on the home screen) 
-						via Personal System/2 (PS/2) keyboard. The game is displayed through a Video Graphics Array (VGA) display, where one 
-						piece will continously descend on the game board. 
-						The main objective is to strategically stack each piece to form complete horizontal lines, at which point the row 
-						will be "cleared," the row will disappear, and as the blocks above fall down to fill the gap, 1000 points are 
-						added to the player's score. 
-						Players must continue clearing rows and gaining points as long as possible without any stack of blocks reaching 
+					<p><strong>Description:</strong> Player controls various geometric shapes (these pieces are
+						displayed on the home screen)
+						via Personal System/2 (PS/2) keyboard. The game is displayed through a Video Graphics Array
+						(VGA) display, where one
+						piece will continously descend on the game board.
+						The main objective is to strategically stack each piece to form complete horizontal lines, at
+						which point the row
+						will be "cleared," the row will disappear, and as the blocks above fall down to fill the gap,
+						1000 points are
+						added to the player's score.
+						Players must continue clearing rows and gaining points as long as possible without any stack of
+						blocks reaching
 						the top of the board. Else, the game is over and players will be given the option to retry. </p>
 
 					<div class="video-container">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/780Wi5F2Dbs?si=acw5nLpbn8pZzfX7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<iframe width="560" height="315"
+							src="https://www.youtube.com/embed/780Wi5F2Dbs?si=acw5nLpbn8pZzfX7"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 
 					<p>
-						<ul>
-							<strong>Featured:</strong>
-							<li>Processor polls the PS/2 keyboard inputs and clears the FIFO (first-in first-out) data registers.</li>
-							<li>A scoring algorithm to checks for and stores cleared rows, accordingly dropping the remaining pieces on the board down by the number of rows cleared.</li>
-							<li>A game logic algorithm to handles input-based piece movements as well as collision logic and move validity according to board boundaries and already placed pieces.</li>
-							<li>VGA uses double buffering when rendering to achieve a smooth visual experience. </li>
-							<li> The audio interface is triggered to output sound effects when either a row is cleared, a shape collides with another shape, or the game is over.</li>
-						</ul>
+					<ul>
+						<strong>Featured:</strong>
+						<li>Processor polls the PS/2 keyboard inputs and clears the FIFO (first-in first-out) data
+							registers.</li>
+						<li>A scoring algorithm to checks for and stores cleared rows, accordingly dropping the
+							remaining pieces on the board down by the number of rows cleared.</li>
+						<li>A game logic algorithm to handles input-based piece movements as well as collision logic and
+							move validity according to board boundaries and already placed pieces.</li>
+						<li>VGA uses double buffering when rendering to achieve a smooth visual experience. </li>
+						<li> The audio interface is triggered to output sound effects when either a row is cleared, a
+							shape collides with another shape, or the game is over.</li>
+					</ul>
 					</p>
 
 					<figure style="text-align: center; margin: 0;">
-						<img src="tetris/fpgaboard.png" alt="FPGA" style="width: 60%; max-width: 500px;"/>
-						<figcaption style="margin-top: -20px; font-size: 17px; color: #ffffff;">DE1-SoC Board</figcaption>
+						<img src="tetris/fpgaboard.png" alt="FPGA" style="width: 60%; max-width: 500px;" />
+						<figcaption style="margin-top: -20px; font-size: 17px; color: #ffffff;">DE1-SoC Board
+						</figcaption>
 					</figure>
-					
-					</div>
+
+				</div>
 			</section>
 
 		</div>
 
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="actions">
-				<li><a href="contact.html" class="button next">Connect with me</a></li>
-				
-				<li class="icon-bottom">
-					<a href="https://www.linkedin.com/in/christina-xie-27a658220"
-					class="icon brands alt fa-linkedin-in" style="position: relative; top: 7px; margin-right: 10px;"><span class="label">LinkedIn</span></a>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="actions">
+					<li><a href="contact.html" class="button next">Connect with me</a></li>
 
-					<a href="https://github.com/chr1s-31x" class="icon brands alt fa-github" style="position: relative; top: 7px; margin-right: 10px;"><span
-						class="label">GitHub</span></a>
-					
-					<a href="mailto:christina.xie04@gmail.com" class="icon solid alt fa-envelope" style="position: relative; top: 7px; margin-right: 10px;"><span
-						class="label">christina.xie04@gmail.com</span></a>
+					<li class="icon-bottom">
+						<a href="https://www.linkedin.com/in/christina-xie-eng" class="icon brands alt fa-linkedin-in"
+							style="position: relative; top: 7px; margin-right: 10px;"><span
+								class="label">LinkedIn</span></a>
 
-					<a href="tel:+12267872543" class="icon solid alt fa-phone" style="position: relative; top: 7px; margin-right: 10px;"><span 
-						class="label">+1 (226) 787 2543</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</footer>
+						<a href="https://github.com/chr1s-31x" class="icon brands alt fa-github"
+							style="position: relative; top: 7px; margin-right: 10px;"><span
+								class="label">GitHub</span></a>
+
+						<a href="mailto:christina.xie04@gmail.com" class="icon solid alt fa-envelope"
+							style="position: relative; top: 7px; margin-right: 10px;"><span
+								class="label">christina.xie04@gmail.com</span></a>
+
+						<a href="tel:+12267872543" class="icon solid alt fa-phone"
+							style="position: relative; top: 7px; margin-right: 10px;"><span class="label">+1 (226) 787
+								2543</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
 
 	</div>
 
